@@ -1,0 +1,52 @@
+.superpcwang-site-top{
+    position: relative;
+    background-color: #ffffff;
+    height: 70px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.superpcwang-site-word {
+    font-family:fantasy;
+    color:#555555;
+    font-size: 35px;
+    letter-spacing: 1px;
+    left: 10px;
+    top: 5px;
+    text-align: left;
+    position: absolute;
+    white-space: nowrap;
+    padding: 0px;
+    margin: 0px;
+}
+.superpcwang-site-discript{
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    font-size: 16px;
+    color: DarkGoldenRod;
+    left: 10px;
+    bottom: 1px;
+    text-align: left;
+    position: absolute;
+    white-space: nowrap;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav{
+    padding: 0px;
+    .navbar-brand{
+        padding: 0.3rem;
+    }
+
+    .active {
+        background:Brown;
+    }
+    .nav-link{
+        padding: 0.5rem;
+    }
+
+    .nav-link:hover{
+        background:Black;
+    }
+}
+

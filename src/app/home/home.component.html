@@ -1,0 +1,9 @@
+<h1 [ngClass]= "{
+    'text-muted': h1Flag,
+    'text-primary': !h1Flag
+}">
+    <div *ngIf="en">home works!</div>
+    <div *ngIf="ch">首頁執行中</div>
+</h1>
+<button (click)="firstClick()">Click</button>
+<button (click)="secondClick()">點擊</button>
