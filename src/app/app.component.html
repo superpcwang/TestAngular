@@ -1,17 +1,16 @@
 
-<nav class="navbar navbar-expand bg-dark navbar-dark fixed-top">
+<nav id="navbar" class="navbar navbar-expand bg-dark navbar-dark fixed-top">
     <!--a class="navbar-brand" href="home.html">
         <img src="navbar_home_icon.png" style="width:40px;">
     </a-->
     <button id="sidebarButton" class="btn" (click)="onSidebarButtonClick()"> <span class="navbar-toggler-icon"></span></button>
-    <a class="navbar-brand mr-auto" routerLink="/"  routerLinkActive="active">Shawn Wang Notes</a>
-    <ul class="navbar-nav mr-auto">
-
-        </ul>
-    <ul class="navbar-nav">
+    <a class="navbar-brand" routerLink="/"  routerLinkActive="active">
+        <img src="assets/NavbarBrand.png" height="30px">
+    </a>
+    <ul class="navbar-nav ml-auto">
         <li id="navbarDropdown" class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">MORE</a>
-            <div class="dropdown-menu bg-dark text-light" style="left: -100%">
+            <div class="dropdown-menu bg-dark text-secondary" style="left: -100%">
                 <a class="dropdown-item" routerLink="/about"  routerLinkActive="active">ABOUT</a>
                 <a class="dropdown-item" routerLink="/contact"  routerLinkActive="active">CONTACT</a>
             </div>
@@ -27,16 +26,16 @@
     <router-outlet></router-outlet>
 </div>
 <nav  id="sidebar" [class.active]="sidebarActive">
-    <ul class="list-unstyled components">
-        <li class="active">
+    <ul class="list-unstyled">
+        <li class="sidebar-folder active">
             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
+                <ul class="sidebar-submenu collapse list-unstyled" id="homeSubmenu">
                     <li><a>Home 1</a></li>
                     <li><a>Home 2</a></li>
                     <li><a>Home 3</a></li>
                 </ul>
-            </li>
-        <li>
+        </li>
+        <li class="sidebar-folder">
             <a>About</a>
         </li>
     </ul>

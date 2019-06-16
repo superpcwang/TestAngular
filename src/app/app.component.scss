@@ -1,8 +1,8 @@
 $navbar_height: 55px;
 $sidebar_width: 250px;
 
-nav{
-    min-height: $navbar_height;
+#navbar{
+    height: $navbar_height;
 }
 
 #sidebar {
@@ -75,7 +75,7 @@ a, a:hover, a:focus {
     transition: all 0.3s;
 }
 
-#sidebar ul.components {
+#sidebar ul li.sidebar-folder {
     //padding: 20px 0;
     border-bottom: 1px solid lightblue;
 }

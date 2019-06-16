@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
     public en: boolean = false;
     public ch: boolean = true;
     public h1Number: number = 0;
-    private _textElement: HTMLElement[] = [];
+    public textArray: string[] = ["Text1", "Text2", "Text3"];
     constructor() { }
     
     ngOnInit() {
