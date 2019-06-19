@@ -1,13 +1,15 @@
 
+<div class="container" style="margin-top: 20px;">
+    <h1 [ngClass]= "{
+        'text-light': h1Flag,
+        'text-warning': !h1Flag
+    }">
+        <div *ngIf="en">home works!</div>
+        <div *ngIf="ch">首頁執行中</div>
+        {{h1Number}}
+    </h1>
 
-<h1 [ngClass]= "{
-    'text-muted': h1Flag,
-    'text-primary': !h1Flag
-}">
-    <div *ngIf="en">home works!</div>
-    <div *ngIf="ch">首頁執行中</div>
-</h1>
-
-<p *ngFor="let text of textArray" [attr.text-data] = "text">{{ text }}</p>
-<button (click)="firstClick()">Click</button>
-<button (click)="secondClick()">點擊</button>
+    <p *ngFor="let text of textArray" [attr.text-data] = "text">{{ text }}</p>
+    <button (click)="firstClick()">Click</button>
+    <button (click)="secondClick()">點擊</button>
+</div>

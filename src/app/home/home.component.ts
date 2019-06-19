@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-    private h1Flag: boolean = false;
+    public h1Flag: boolean = false;
 
     public en: boolean = false;
     public ch: boolean = true;
@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
 
     public firstClick(): void{
         this.h1Flag = !this.h1Flag;
+        this.h1Number++;
         this.setLanguage("en");
     }
 

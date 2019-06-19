@@ -1,5 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+    --my-text-normal: #909CA1;
+    --my-text-hover: #C7CBCE;
+    --my-text-active: #FFFFFF;
+    --my-text-click: #555C6E;
+    --my-bg-body: rgb(38, 42, 49);
+    --my-bg-menu: rgb(40, 49, 58);
+    --my-bg-submenu: #3A4251;
+    --my-bg-hover: #555C6E;
+    --my-bg-active: rgb(247, 185, 0);
+    --my-bg-click: #FFFFFF;
+    --my-header-var: 15;
+}
+
+
 body{
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji","黑體-繁","微軟正黑體";
+    background: var(--my-bg-body);
+    color: var(--my-text-normal);
+
+    h1{
+        color: rgb(255, 255, 255);
+    }
+    
+    h2{
+        color: rgb(255, 255, 255);
+    }
+    
+    h3{
+        color: rgb(calc(255 - var(--my-header-var)), calc(255 - var(--my-header-var)), calc(255 - var(--my-header-var)));
+    }
+    
+    h4{
+        color: rgb(calc(255 - var(--my-header-var)*2 ), calc(255 - var(--my-header-var)*2 ), calc(255 - var(--my-header-var)*2 ));
+    }
+
+    h5{
+        color: rgb(calc(255 - var(--my-header-var)*3 ), calc(255 - var(--my-header-var)*3 ), calc(255 - var(--my-header-var)*3 ));
+    }
+
+    #content a.btn.btn-in-content{
+        background: var(--my-bg-submenu);
+        color: var(--my-text-normal);
+        //boostrap style will overwrite, assign none again.
+    }
+
+    #content a.btn.btn-in-content:hover{
+        background: var(--my-bg-hover);
+        color: var(--my-text-hover);
+    }
+
+    #content a.btn.btn-in-content:active{
+        background: var(--my-bg-click);
+        color: var(--my-text-click);
+    }
+    
+    #content a.btn.btn-in-content:focus{
+        border: 2px solid var(--my-bg-active);
+        outline: none;
+        box-shadow: none;
+    }
+
+    .align-center{
+        align-items: center !important;
+        flex-direction: column !important;
+        display: flex !important;
+    }
+    /*
+    a:focus{
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }*/
 }
 
