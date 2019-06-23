@@ -12,6 +12,21 @@ import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ArticleComponent } from './article/article.component';
 
+
+import { Pipe, PipeTransform } from "@angular/core";
+import { DomSanitizer } from '@angular/platform-browser';
+ 
+
+@Pipe({ name: 'safeHtml' })
+export class SafeHtmlPipe implements PipeTransform {
+  constructor(private sanitized: DomSanitizer) { }
+ 
+  transform(value) {
+    return this.sanitized.bypassSecurityTrustHtml(value);
+  }
+}
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +35,8 @@ import { ArticleComponent } from './article/article.component';
     ContactComponent,
     HomeComponent,
     SidebarComponent,
-    ArticleComponent
+    ArticleComponent,
+    SafeHtmlPipe,
   ],
   imports: [
     BrowserModule,

@@ -68,7 +68,7 @@ $sidebar_width: 250px;
     a, a:hover, a:focus {
         //color: inherit;
         text-decoration: none;
-        transition: all 0.1s;
+        transition: all 0.2s;
     }
 
     a[data-toggle="collapse"] {
@@ -140,6 +140,13 @@ $sidebar_width: 250px;
     position: absolute;
     top: $navbar_height;
     right: 0;
+    hr{
+        border: none;
+        width: 80%;
+        margin-top: 10rem;
+        margin-bottom: 0.5rem;
+        border-top: rgb(75, 75, 75) 1px solid;
+    }
 }
 
 //responsive for sidebar and content

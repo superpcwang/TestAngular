@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
 import { ActivatedRoute, Params } from "@angular/router";
 import { Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import {APP_BASE_HREF} from '@angular/common';
+
 
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.scss']
+  styleUrls: ['./article.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ArticleComponent implements OnInit {
     public title: string;
@@ -24,15 +25,15 @@ export class ArticleComponent implements OnInit {
         //this.sub = this.route.params.subscribe(this.onRouteRedirect);
         
         this.sub = this.route.params.subscribe( (params: Params) => {
-            this.setTitle(params["link"]);
+            this.setTitle(params["name"], params["link"]);
         });
         console.log(this.sub);
         
     }
 
-    public setTitle(title: string){
+    public setTitle(title: string, link: string){
         this.title = title;
-        this.http.get("/assets/html/" + this.title + ".html", {responseType: 'text'}).subscribe( data =>{
+        this.http.get("assets/html/" + link, {responseType: 'text'}).subscribe( data =>{
             this.setPage(data);
         });
     }
@@ -41,8 +42,4 @@ export class ArticleComponent implements OnInit {
         this.page = page;
     }
 
-    public onRouteRedirect(params: Params): void{
-        this.title = params["link"];
-        console.log(params, this.title);
-    }
 }

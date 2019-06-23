@@ -1,0 +1,37 @@
+#article{
+    img{
+        max-width: 90vw !important;
+        height: auto !important;
+    }
+
+    hr{
+        border: none;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-top: var(--my-bg-active) 2px solid;
+    }
+    
+    a{
+        span{
+            color: var(--my-text-hover) !important;
+        }
+    
+        span:hover, span:focus, span:active{
+            color: var(--my-text-active) !important;
+        }
+    }
+    
+    tbody{
+        tr{
+            td{
+                background-color: transparent !important;
+                border: var(--my-text-hover) 2px solid;
+            }
+        }
+    }
+
+    .img-logo{
+        background-color: var(--my-bg-submenu);
+    }
+}
+

@@ -23,24 +23,25 @@ export class AppComponent {
         {
             name: "Web Game Engine",
             articles: [
-                {name: "Page1", link: "page1"}, 
-                {name: "Page2", link: "page2"}, 
-                {name: "Page3", link: "page3"}, 
-                {name: "Page4", link: "page4"} 
-            ]
-        },
-        {
-            name: "Game Engine Arch.",
-            articles: [
-                {name: "Page5", link: "page5"}, 
-                {name: "Page6", link: "page6"}, 
+                {name: "Introduction", link: "wge-01-Introduction.html"},
+                {name: "Title1", link: "empty.html"},
+                {name: "Title2", link: "empty.html"}, 
+                {name: "Title3", link: "empty.html"}
             ]
         },
         {
             name: "Web Application",
             articles: [
-                {name: "Page7", link: "page7"}, 
-                {name: "Page8", link: "page8"}, 
+                {name: "Introduction", link: "wapp-01-Introduction.html"},
+                {name: "Title4", link: "empty.html"}, 
+                {name: "Title5", link: "empty.html"}, 
+            ]
+        },
+        {
+            name: "Folder Name",
+            articles: [
+                {name: "Title6", link: "empty.html"}, 
+                {name: "Title7", link: "empty.html"}, 
             ]
         }
     ];
