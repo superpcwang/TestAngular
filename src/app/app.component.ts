@@ -51,7 +51,8 @@ export class AppComponent {
     }
 
     public onSidebarButtonClick(): void {
-        this.sidebarActive = !this.sidebarActive;
+        //this.sidebarActive = !this.sidebarActive;
+        this.sidebarActive = false;
     }
 
     public onSidebarHide(): void{

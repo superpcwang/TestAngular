@@ -135,7 +135,7 @@ $sidebar_width: 250px;
 }
 
 #content {
-    width: calc(100% - #{$sidebar_width});
+    width: 100%;
     transition: all 0.3s;
     position: absolute;
     top: $navbar_height;
